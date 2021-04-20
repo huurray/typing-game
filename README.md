@@ -1,2 +1,3 @@
 # typing-game
-simple typing game with vanilla javascript
+
+Simple typing game with vanilla javascript
