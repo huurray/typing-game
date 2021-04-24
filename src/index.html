@@ -5,8 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Typing Game</title>
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/style.css" />
   </head>
   <body>
-    <div id="App"></div>
+    <div class="main">
+      <div class="board">
+        <div class="board-header">
+          <div>남은 시간 : <span class="board-time">0</span>초</div>
+          <div>점수 : <span class="board-score">0</span>점</div>
+        </div>
+        <div class="board-word">문제 단어</div>
+      </div>
+      <input class="input" placeholder="입력" />
+      <button class="button">시작</button>
+    </div>
+    <div class="result">
+      <p>Mission Complete!</p>
+      <h2>당신의 점수는 <span class="result-score">0</span>점입니다.</h2>
+      <p>
+        단어당 평균 답변 시간은 <span class="result-average">0</span>초입니다.
+      </p>
+      <button class="restart-button">다시 시작</button>
+    </div>
+    <div class="loading-container">
+      <div class="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
   </body>
 </html>

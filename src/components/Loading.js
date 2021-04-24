@@ -1,23 +1,14 @@
-export default class loading {
+export default class Loading {
   constructor() {
-    this.$loadingOverlay = document.createElement("div");
-    this.$loadingOverlay.className = "loading-container";
-    document.querySelector("body").appendChild(this.$loadingOverlay);
-    this.render();
+    const $loading = document.querySelector('.loading-container');
+    this.$loading = $loading;
   }
 
   close() {
-    const $loadingOverlay = document.querySelector(".loading-container");
-    $loadingOverlay.remove();
+    this.$loading.style.display = 'none';
   }
 
-  render() {
-    this.$loadingOverlay.innerHTML = `
-      <div class="loading">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>`;
+  open() {
+    this.$loading.style.display = 'flex';
   }
 }

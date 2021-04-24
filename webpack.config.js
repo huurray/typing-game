@@ -1,15 +1,11 @@
-import path from "path";
-import { fileURLToPath } from "url";
-// plugins
-import HtmlWebpackPlugin from "html-webpack-plugin";
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const dirname = path.dirname(fileURLToPath(import.meta.url));
-
-export default {
-  entry: "./src/index.js",
+module.exports = {
+  entry: './src/index.js',
   output: {
-    filename: "main.js",
-    path: path.resolve(dirname, "public"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   module: {
@@ -18,9 +14,9 @@ export default {
         test: /\.js$/,
         exclude: /(node_modules|pages)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ['@babel/preset-env'],
           },
         },
       },
@@ -28,14 +24,14 @@ export default {
         test: /\.css$/,
         use: [
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: { import: true },
           },
         ],
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
+  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
   devServer: {
     historyApiFallback: true,
   },
