@@ -20,7 +20,7 @@
 1. npm install or yarn
 2. npm run start
 
-### screenshot
+### Screenshot
 
 ![스크린샷1](https://user-images.githubusercontent.com/41982439/115958204-60c65500-a541-11eb-84e0-3f224c06332f.png)
 
