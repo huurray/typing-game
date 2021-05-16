@@ -1,4 +1,4 @@
-# typing-game
+# Typing-Game
 
 > Simple typing game with vanilla javascript.
 
