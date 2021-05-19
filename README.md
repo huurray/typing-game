@@ -17,7 +17,7 @@
 
 ### How to execute
 
-1. npm install or yarn
+1. npm install
 2. npm run start
 
 ### Screenshot
